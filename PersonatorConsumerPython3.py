@@ -9,7 +9,7 @@ def main():
   service_endpoint = "v3/WEB/ContactVerify/doContactVerify"; #please see https://www.melissa.com/developer/personator for more endpoints
 
   # Create an ArgumentParser object
-  parser = argparse.ArgumentParser(description='Business Coder command line arguments parser')
+  parser = argparse.ArgumentParser(description='Personator Consumer command line arguments parser')
 
   # Define the command line arguments
   parser.add_argument('--license', '-l', type=str, help='License key')
@@ -48,9 +48,9 @@ def get_contents(base_service_url, request_query):
 
     print("API Call: ")
     for i in range(0, len(url), 70):
-        try:
+        if i + 70 < len(url):
             print(url[i:i+70])
-        except:
+        else:
             print(url[i:len(url)])
     print("\nAPI Response:")
     print(pretty_response)
@@ -91,7 +91,7 @@ def call_api(base_service_url, service_endpoint, license, fullname, addressline1
         while not input_fullname or not input_addressline1 or not input_city or not input_state or not input_postal or not input_country or not input_email or not input_phone:
             print("\nFill in each value to see results")
             if not input_fullname:
-                input_fullname = input("\nFulll Name: ")
+                input_fullname = input("\nFull Name: ")
             if not input_addressline1:
                 input_addressline1 = input("\nAddressline1: ")
             if not input_city:

@@ -7,18 +7,15 @@ Please feel free to copy or embed this code to your own project. Happy coding!
 
 For the latest Melissa Personator Consumer release notes, please visit: https://releasenotes.melissa.com/cloud-api/personator-consumer/
 
-For further documentation, please visit: https://www.melissa.com/quickstart-guides/personator-consumer
+For further documentation, please visit: https://docs.melissa.com/cloud-api/personator-consumer/personator-consumer-index.html
 
 The console will ask the user for:
 
-- FullName
 - AddressLine1
 - City
 - State
 - Postal
 - Country
-- Email 
-- Phone
 
 And return information of the person such as:
 
@@ -29,6 +26,8 @@ And return information of the person such as:
 - City
 - CompanyName
 - EmailAddress
+- Latitude
+- Longitude
 - MelissaAddressKey (MAK)
 - MelissaAddressKeyBase
 - NameFull
@@ -78,14 +77,11 @@ If you are unsure, you can check by opening a command prompt window and typing t
 
 #### Run Powershell Script
 Parameters:
-- -fullname: an input full name
 - -addressline1: an input address line 1
 - -city: an input city
 - -state: an input state
 - -postal: an input postal code
 - -country: an input country
-- -email: an input email
-- -phone: an input phone number
  	
   This is convenient when you want to get results for a specific person in one run instead of testing multiple records in interactive mode.  
 
@@ -102,10 +98,10 @@ There are two modes:
 
 - Command Line 
 
-	You can pass a full name, address line 1, city, state, postal code, country, email, phone, and a license string into `-fullname`, `-addressline1`, `-city`, `-state`, `-postal`, `-country`, `-email`, `-phone`, and `-license` parameters respectively to test the Cloud API. For example: 
+	You can pass address line 1, city, state, postal code, country, and a license string into `-addressline1`, `-city`, `-state`, `-postal`, `-country`, and `-license` parameters respectively to test the Cloud API. For example: 
 	```
-    .\PersonatorConsumerPython3.ps1 -fullname "Ray Melissa" -addressline1 "22382 Avenida Empresa" -city "Rancho Santa Margarita" -state "CA" -postal "92688" -country "United States" -email "info@melissa.com" -phone "800-635-4772"
-    .\PersonatorConsumerPython3.ps1 -fullname "Ray Melissa" -addressline1 "22382 Avenida Empresa" -city "Rancho Santa Margarita" -state "CA" -postal "92688" -country "United States" -email "info@melissa.com" -phone "800-635-4772" -license "<your_license_string>"
+    .\PersonatorConsumerPython3.ps1 -addressline1 "22382 Avenida Empresa" -city "Rancho Santa Margarita" -state "CA" -postal "92688" -country "United States" 
+    .\PersonatorConsumerPython3.ps1 -addressline1 "22382 Avenida Empresa" -city "Rancho Santa Margarita" -state "CA" -postal "92688" -country "United States" -license "<your_license_string>"
     ```
 	
 This is the expected output from a successful setup for interactive mode:
@@ -144,14 +140,11 @@ Once all of this is done, you should be able to verify that the Python3 is insta
 
 #### Run Bash Script
 Parameters:
-- --fullname: an input full name
 - --addressline1: an input address line 1
 - --city: an input city
 - --state: an input state
 - --postal: an input postal code
 - --country: an input country
-- --email: an input email
-- --phone: an input phone number
 
   This is convenient when you want to get results for a specific request in one run instead of testing multiple records in interactive mode.  
 
@@ -168,10 +161,10 @@ There are two modes:
 
 - Command Line 
 
-	You can pass a full name, address line 1, city, state, postal code, country, email, phone, and license string into `--fullname`, `--addressline1`, `--city`, `--state`, `--postal`, `--country`, `--email`, `--phone`, and `--license` parameters respectively to test the Cloud API. For example: 
+	You can pass address line 1, city, state, postal code, country, and license string into `--addressline1`, `--city`, `--state`, `--postal`, `--country`, and `--license` parameters respectively to test the Cloud API. For example: 
 	```
-    ./PersonatorConsumerPython3.sh --fullname "Ray Melissa" --addressline1 "22382 Avenida Empresa" --city "Rancho Santa Margarita" --state "CA" --postal "92688" --country "United States" --email "info@melissa.com" --phone "800-635-4772"
-    ./PersonatorConsumerPython3.sh --fullname "Ray Melissa" --addressline1 "22382 Avenida Empresa" --city "Rancho Santa Margarita" --state "CA" --postal "92688" --country "United States" --email "info@melissa.com" --phone "800-635-4772" --license "<your_license_string>"
+    ./PersonatorConsumerPython3.sh --addressline1 "22382 Avenida Empresa" --city "Rancho Santa Margarita" --state "CA" --postal "92688" --country "United States"
+    ./PersonatorConsumerPython3.sh --addressline1 "22382 Avenida Empresa" --city "Rancho Santa Margarita" --state "CA" --postal "92688" --country "United States" --license "<your_license_string>"
     ```
 
 This is the expected output from a successful setup for interactive mode:

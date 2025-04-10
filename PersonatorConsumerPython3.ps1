@@ -4,14 +4,11 @@
 
 ######################### Parameters ##########################
 param(
-    $fullname = '', 
     $addressline1 = '', 
     $city = '', 
     $state = '', 
     $postal = '', 
     $country = '', 
-    $email = '', 
-    $phone = '',  
     $license = '', 
     [switch]$quiet = $false
     )
@@ -36,9 +33,9 @@ if ([string]::IsNullOrEmpty($license)) {
 }
 
 # Run project
-if ([string]::IsNullOrEmpty($fullname) -and [string]::IsNullOrEmpty($addressline1) -and [string]::IsNullOrEmpty($city) -and [string]::IsNullOrEmpty($state) -and [string]::IsNullOrEmpty($postal) -and [string]::IsNullOrEmpty($country) -and [string]::IsNullOrEmpty($email) -and [string]::IsNullOrEmpty($phone)) {
+if ([string]::IsNullOrEmpty($addressline1) -and [string]::IsNullOrEmpty($city) -and [string]::IsNullOrEmpty($state) -and [string]::IsNullOrEmpty($postal) -and [string]::IsNullOrEmpty($country)) {
   python3 PersonatorConsumerPython3.py --license $license 
 }
 else {
-  python3 PersonatorConsumerPython3.py --license $license --fullname $fullname --addressline1 $addressline1 --city $city --state $state --postal $postal --country $country --email $email --phone $phone 
+  python3 PersonatorConsumerPython3.py --license $license  --addressline1 $addressline1 --city $city --state $state --postal $postal --country $country
 }

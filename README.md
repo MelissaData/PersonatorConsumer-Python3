@@ -41,7 +41,7 @@ And return information of the person such as:
 ## Tested Environments
 - Windows 10 64-bit Python 3.10.4, Powershell 5.1
 - Ubuntu Linux 20.04.04 LTS 64-bit Python 3.10.4
-- Personator Consumer Cloud API Version 9.4.0.1333
+- Personator Consumer Cloud API Version 9.4.0.1340
 
 ## Getting Started
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
